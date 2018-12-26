@@ -137,7 +137,7 @@ button.btn.btn-default.search:hover {
 }
 .agile-login ul li a {
     font-size: 1em;
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
     color: #fff;
     text-decoration: none;
 }

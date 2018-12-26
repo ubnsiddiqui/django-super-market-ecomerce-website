@@ -51,19 +51,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 {% if user.is_authenticated %}
                     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          {{ user.username }}
+          {{ user.username|lower }}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #333333">
             <a class="dropdown-item" href="{% url 'super_market:logout' %}">Logout</a>
             </div>
                         </li>
-{#                 <div class="dropdown"><div>#}
-{#                     <li class="dropdown-menu">#}
-{#                         <ul>#}
-{#                             <li><a href="{% url 'super_market:logout' %}">Logout</a></li>#}
-{#                         </ul>#}
-{#                     </li>#}
-{#                 </div></div>#}
                 {% else %}
                     <li><a href="{% url 'super_market:login' %}">Login</a></li>
                 {% endif %}
@@ -87,7 +80,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
         <div class="w3ls_logo_products_left1">
             <ul class="phone_email">
-                <li><i class="fa fa-phone" aria-hidden="true"></i>Order online or call us : (+0123) 234 567</li>
+                <li><i class="fa fa-phone" aria-hidden="true"></i>Order online or call us : (+923) 24 6946394</li>
 
             </ul>
         </div>
