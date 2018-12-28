@@ -220,7 +220,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </li>
                     <li><a href="gourmet.html">Gourmet</a></li>
                     <li><a href="offers.html">Offers</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="{%url 'super_market:contact'  %}">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -238,18 +238,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <h3>Contact</h3>
 
                 <ul class="address">
-                    <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>1234k Avenue, 4th block, <span>New York City.</span>
+                    <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>445 Nasheman Iqbal Lahore
                     </li>
                     <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a
-                            href="mailto:info@example.com">info@example.com</a></li>
-                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 567</li>
+                            href="mailto:info@example.com">usiddiqui14@gmail.com</a></li>
+                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+92 324 6946394</li>
                 </ul>
             </div>
             <div class="col-md-3 w3_footer_grid">
                 <h3>Information</h3>
                 <ul class="info">
                     <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="about.html">About Us</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="contact.html">Contact Us</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{% url 'super_market:contact' %}">Contact Us</a></li>
                     <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="short-codes.html">Short Codes</a>
                     </li>
                     <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="faq.html">FAQ's</a></li>
@@ -274,8 +274,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <ul class="info">
                     <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="products.html">Store</a></li>
                     <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="checkout.html">My Cart</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="login.html">Login</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="registered.html">Create Account</a>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{%url 'super_market:login'%}>Login</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{%url 'super_market:register' %}">Create Account</a>
                     </li>
                 </ul>
             </div>
@@ -286,7 +286,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="footer-copy">
 
         <div class="container">
-            <p>© 2017 Super Market. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+            <p>© 2018 Super Market. All rights reserved | Design by <a href="{% url 'super_market:index' %}">Muhammad Usama Siddiqui</a></p>
         </div>
     </div>
 

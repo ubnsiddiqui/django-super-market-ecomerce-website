@@ -55,3 +55,8 @@ def user_login(request):
     else:
 
         return render(request, 'super_market/login.html', {})
+
+
+@csrf_exempt
+def contact(request):
+    return render(request, 'super_market/contact.html')
