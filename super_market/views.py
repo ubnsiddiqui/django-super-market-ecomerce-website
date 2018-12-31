@@ -71,4 +71,17 @@ def display_products(request):
 
 @login_required
 def checkout(request):
+
     return render(request, 'super_market/checkout.html')
+
+
+def single(request, product):
+    prod = Product.objects.all()
+    prod1 = Product.objects.all().exclude(id=product)[:4]
+    for i in prod:
+        if i.id == int(product):
+            return render(request, 'super_market/single.html', {'product': i, 'prod': prod1})
+        else:
+            continue
+
+

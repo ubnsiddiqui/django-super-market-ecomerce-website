@@ -14,6 +14,7 @@ urlpatterns = [url(r'^$', views.index, name='index'),
                url(r'^contact/$', views.contact, name='contact'),
                url(r'^products/$', views.display_products, name='product'),
                url(r'^checkout/$', views.checkout, name='checkout'),
+               url(r'^single-item-description/(?P<product>\d+)/$', views.single, name='single'),
                ]
 urlpatterns += staticfiles_urlpatterns()
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

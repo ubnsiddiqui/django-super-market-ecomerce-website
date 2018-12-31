@@ -735,7 +735,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <figure>
                                         <div class="snipcart-item block">
                                             <div class="snipcart-thumb">
-                                                <a href="products.html"><img title=" " alt=" "
+                                                <a href="{% url 'super_market:single' product.id %}"><img title=" " alt=" "
                                                                              src="{{ product.image.url }}"></a>
                                                 <p>{{ product.name }}</p>
                                                 <h4>{{ product.price }} Rs</h4>
