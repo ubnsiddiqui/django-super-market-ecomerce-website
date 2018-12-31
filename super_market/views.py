@@ -6,10 +6,12 @@ from django.urls import reverse
 from super_market.form import RegisterForm
 from django.contrib.auth import authenticate, login, logout
 from django.views.decorators.csrf import csrf_exempt
+from .models import Cart,Product
 
 
 def index(request):
-    return render(request, 'super_market/index.html')
+    prod1 = Product.objects.all()[2:]
+    return render(request, 'super_market/index.html', {'products': prod1})
 
 
 @login_required
@@ -60,3 +62,13 @@ def user_login(request):
 @csrf_exempt
 def contact(request):
     return render(request, 'super_market/contact.html')
+
+
+def display_products(request):
+    prod = Product.objects.all()
+    return render(request, 'super_market/products.html', {'products': prod})
+
+
+@login_required
+def checkout(request):
+    return render(request, 'super_market/checkout.html')

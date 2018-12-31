@@ -1,5 +1,6 @@
 from django.conf.urls import url
-from django.template.context_processors import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.conf.urls.static import static
 
 from mysite import settings
 from . import views
@@ -11,4 +12,8 @@ urlpatterns = [url(r'^$', views.index, name='index'),
                url(r'^logout/$', views.user_logout, name='logout'),
                url(r'^register/$', views.register, name='register'),
                url(r'^contact/$', views.contact, name='contact'),
+               url(r'^products/$', views.display_products, name='product'),
+               url(r'^checkout/$', views.checkout, name='checkout'),
                ]
+urlpatterns += staticfiles_urlpatterns()
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
